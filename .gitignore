@@ -1,0 +1,9 @@
+*.o
+testClasePer
+testClase[*]
+!testClase[*].cpp
+*.tex
+*.log
+*.gz
+*.aux
+*.log
