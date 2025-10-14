@@ -1,4 +1,4 @@
-/* ********** CPersona.cpp ************* */
+/* ********** testClasePer.cpp ************* */
 /* *************************************
 PROGRAMACION ORIENTADA A OBJETOS CON C++
         prof. Armando B. VERA
