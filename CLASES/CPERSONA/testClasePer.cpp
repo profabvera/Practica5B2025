@@ -1,3 +1,8 @@
+/* ********** CPersona.cpp ************* */
+/* *************************************
+PROGRAMACION ORIENTADA A OBJETOS CON C++
+        prof. Armando B. VERA
+************************************** */
 #include <iostream>
 #include "CPersona.h"
 #include <locale>
@@ -57,7 +62,15 @@ int main() {
     cout << "\n\nPrueba del operador de asignación sobrecargado" << endl;	
 	CPersona p4=p2;
 	cout << p2.toString() << endl;
-
+	
+	cout << "\n\tProbamos ahora el operador << sobrecargado" << endl;
+	cout << p2 << endl;
+	
+	cout << "\n\n\tProbamos ahora el operado >> sobrecargado " <<endl;
+	
+	CPersona p5;
+	cin >> p5;
+	cout << p5 <<endl;
 	return 0;
 }
 		

@@ -9,6 +9,9 @@ PROGRAMACION ORIENTADA A OBJETOS CON C++
 #include <iostream>
 #include <string>
 #include <sstream>
+#include <ostream>
+#include <istream>
+#include <locale>
 
 class CPersona {
 	private:
@@ -34,7 +37,11 @@ class CPersona {
 	   std::string getDni() const;
 	   int getFDNac()const;
 	   std::string toString();
-	   CPersona& operator=(const CPersona& p); // sobrecarga del operador de asignacion
+	   // sobrecarga de operadores
+	   CPersona& operator=(const CPersona& p); // operador de asignacion
+	   friend std::ostream & operator << (std::ostream& pout, const CPersona& p);
+	   friend std::istream& operator >> (std::istream& pin, CPersona & p); 
+	   
 };
 
 #endif // CPERSONA_H

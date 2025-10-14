@@ -88,5 +88,42 @@ CPersona& CPersona::operator = (const CPersona & p){
 	return *this;
 }
 
+std::ostream& operator <<(std::ostream& pout, const CPersona & p){
+//	pout << "Datos de la Persona" << std::endl<<std::endl;
+	pout << "Nombre-----------:" << p.nombre <<std::endl;
+	pout << "Apellido---------:" << p.apellido <<std::endl;
+	pout << "Genero-----------:" << p.genero << std::endl;
+	pout << "DNI N°-----------:" << p.dni << std::endl;
+	pout << "Fecha de Nac.----:" << p.fDNac << std::endl;
+	return pout;
+}
 
-
+std::istream& operator >> (std::istream& pin, CPersona & p){
+	std::cout << "\n\tIngrese los datos de la persona " << std::endl;
+	while(p.nombre==""){
+		std::cout << "\tNombre: ";
+		std::cin >> p.nombre;
+		std::cin.clear();
+	}
+	while(p.apellido==""){
+		std::cout << "\tApellido: ";
+		std::cin >> p.apellido;
+		std::cin.clear();
+	}
+	while(p.genero==""){
+		std::cout << "\tGénero: ";
+		std::cin >> p.genero;
+		std::cin.clear();
+	}
+	while(p.dni=="00000000"){
+		std::cout << "\tDNI N° : ";
+		std::cin >> p.dni;
+		std::cin.clear();
+	}
+	while(p.fDNac==0){
+		std::cout << "\tFecha de Nac.: ";
+		std::cin >> p.fDNac;
+		std::cin.clear();
+	}					
+	return pin;
+}
