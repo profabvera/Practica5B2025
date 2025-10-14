@@ -26,7 +26,7 @@ int main() {
 	cout << "\nNuevo objeto utilizando el constructor general " << endl;
 	CPersona p2("Leonel", "Scaloni", "Masculino", "35879147", 14031985);
 	cout << p2.toString() << endl;
-
+/*
 // Creamos otro objeto de CPersona pero ahora, con datos ingresado por teclado.
 //declaramos 5 objetos para contener de forma temporal los atributos del objeto.
 	std::string nom;
@@ -53,7 +53,10 @@ int main() {
 	CPersona p3(nom,ape,gen,dni,fdn);
 	
 	cout << p3.toString() <<endl;
-
+*/
+    cout << "\n\nPrueba del operador de asignación sobrecargado" << endl;	
+	CPersona p4=p2;
+	cout << p2.toString() << endl;
 
 	return 0;
 }
