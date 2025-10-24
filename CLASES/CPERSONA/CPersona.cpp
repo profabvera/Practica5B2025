@@ -115,7 +115,7 @@ std::istream& operator >> (std::istream& pin, CPersona & p){
 		std::cin >> p.genero;
 		std::cin.clear();
 	}
-	while(p.dni=="00000000"){
+	while(p.dni=="00000000" || p.dni==""){
 		std::cout << "\tDNI N° : ";
 		std::cin >> p.dni;
 		std::cin.clear();

@@ -20,11 +20,18 @@ int main() {
 	}
 	cout << "\nLo hemos mostrado utilizando el operador cout sobrecargado " << endl;
 	// Vamos a actualizar los datos del primer elemento del array
+	/*
 	cin >> listaPer[0];
 	cout << listaPer[0] << endl;
 	
 	for(size_t i=0; i<listaPer.size(); i++){
 		cout << listaPer[i] << endl;
+	}
+	*/
+	cout << "\n\tExiste otra forma de definir un array directamente " << endl;
+	CPersona listaPer1[tamArray];
+	for(size_t i=0; i<tamArray; i++){
+		cout << listaPer1[i] << endl;
 	}
 	
 	return 0;

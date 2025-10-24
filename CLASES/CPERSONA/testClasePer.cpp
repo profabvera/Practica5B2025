@@ -31,7 +31,7 @@ int main() {
 	cout << "\nNuevo objeto utilizando el constructor general " << endl;
 	CPersona p2("Leonel", "Scaloni", "Masculino", "35879147", 14031985);
 	cout << p2.toString() << endl;
-/*
+
 // Creamos otro objeto de CPersona pero ahora, con datos ingresado por teclado.
 //declaramos 5 objetos para contener de forma temporal los atributos del objeto.
 	std::string nom;
@@ -55,18 +55,20 @@ int main() {
 	cout << "\n\tFecha de Nac: ddmmaaaa ";
 	cin >> fdn;
 	cout << "Creamos un nuevo objeto con los datos ingresado por teclado" << endl;
-	CPersona p3(nom,ape,gen,dni,fdn);
+	CPersona p3(nom,ape,gen,dni,fdn); // Declaramos un nuevo objeto CPersona utilizando el
+										// constructor general con valores ingresado
+										// en tiempo de ejecución.
 	
 	cout << p3.toString() <<endl;
-*/
-    cout << "\n\nPrueba del operador de asignación sobrecargado" << endl;	
-	CPersona p4=p2;
-	cout << p2.toString() << endl;
+
+    cout << "\n\nPrueba del operador = (de asignación) sobrecargado" << endl;	
+	CPersona p4=p2; // Estoy asignando al objeto p4 los valores del objeto p2
+	cout << p4.toString() << endl;
 	
-	cout << "\n\tProbamos ahora el operador << sobrecargado" << endl;
+	cout << "\n\tProbamos ahora el operador << (de inserción) sobrecargado" << endl;
 	cout << p2 << endl;
 	
-	cout << "\n\n\tProbamos ahora el operado >> sobrecargado " <<endl;
+	cout << "\n\n\tProbamos ahora el operador >> (de estracción) sobrecargado " <<endl;
 	
 	CPersona p5;
 	cin >> p5;
@@ -74,4 +76,7 @@ int main() {
 	return 0;
 }
 		
-
+/* Observaciones
+La función getline(cin, nom) lo que hace es poner todo lo que hay en una linea en la variable nombre
+* Con esta función es posible poner en la variable nom por ejemplo Eduardo Ariel.
+*/
