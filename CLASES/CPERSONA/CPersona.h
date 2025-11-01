@@ -14,7 +14,7 @@ PROGRAMACION ORIENTADA A OBJETOS CON C++
 #include <locale>
 
 class CPersona {
-	private:
+	protected:
 	   std::string nombre;
 	   std::string apellido;
 	   std::string genero;
