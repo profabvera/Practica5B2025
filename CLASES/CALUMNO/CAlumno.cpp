@@ -5,8 +5,7 @@ CAlumno::CAlumno() : CPersona() {
 	tutor=CPersona();
 }
 CAlumno::CAlumno(std::string nom_in, std::string ape_in, std::string dni_in,
-			std::string gen_in, int fdn_in, int mat_in, CPersona tut_in) :
-			CPersona(nom_in,ape_in,dni_in,gen_in,fdn_in) {
+	std::string gen_in, int fdn_in, int mat_in, CPersona tut_in) :  CPersona(nom_in,ape_in,dni_in,gen_in,fdn_in) {
 	matricula=mat_in;
 	tutor=tut_in;
 }
